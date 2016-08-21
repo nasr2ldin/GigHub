@@ -27,6 +27,7 @@ namespace GigHub.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
             //var artist = _context.Users.Single(u => u.Id == artistId);
