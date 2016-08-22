@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace GigHub.ViewModel
 {
-    public class FutureTime:ValidationAttribute
+    public class FutureTime : ValidationAttribute
     {
         public override bool IsValid(object value)
         {
@@ -14,7 +14,7 @@ namespace GigHub.ViewModel
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
                 out dateTime);
-            return (isValid);
+            return isValid;
         }
     }
 }
